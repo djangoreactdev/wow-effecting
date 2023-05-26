@@ -19,7 +19,7 @@ def deployApp() {
     sh 'docker rm wow-effecting || true'
     sh 'docker rmi wow-effecting || true'
     sh 'docker pull djangoreactdev/wow-effecting:1.0'
-    sh 'docker run -d --name wow-effecting -p 80:3000 djangoreactdev/wow-effecting:1.0'
+    sh 'docker run -d --name wow-effecting -p 81:3000 djangoreactdev/wow-effecting:1.0'
 } 
 
 return this
