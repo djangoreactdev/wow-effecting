@@ -1,0 +1,15 @@
+# Ignore development files and directories
+node_modules
+.cache
+.next
+
+# Ignore version control files
+.git
+.gitignore
+
+# Ignore build artifacts and logs
+out
+build
+.DS_Store
+npm-debug.log
+yarn-error.log
