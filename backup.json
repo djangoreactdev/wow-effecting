@@ -1,0 +1,86 @@
+[
+  {
+    "model": "sessions.session",
+    "pk": "g8bsvld7j5tcw8ko1y160hydxohwnb7c",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQAP_C2RAWCqUevfcNZJcFqRqalPZk_Lsh6UGvM5N5i4DHXsLR0hYWFlcB4vLLCOMz1S74gfW-yrjWfVtI9kSetsl55fS6ne3foGArfRsVWuctQ6IcYSAcJ-U8O5docE5rbyIYkzOy14aBY8reIlk1ZUMwis8X6WE4Kw:1qOk8G:aa--s2rDs34hRIYM9AcbaMbo-5QTeBsoNEooVNVhB2U",
+      "expire_date": "2023-08-09T19:25:12.028Z"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": { "domain": "example.com", "name": "wow-effect" }
+  },
+  {
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 1,
+    "fields": {
+      "minute": "0",
+      "hour": "4",
+      "day_of_week": "*",
+      "day_of_month": "*",
+      "month_of_year": "*",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "model": "django_celery_beat.periodictasks",
+    "pk": 1,
+    "fields": { "last_update": "2023-07-26T19:17:26.974Z" }
+  },
+  {
+    "model": "django_celery_beat.periodictask",
+    "pk": 1,
+    "fields": {
+      "name": "celery.backend_cleanup",
+      "task": "celery.backend_cleanup",
+      "interval": null,
+      "crontab": 1,
+      "solar": null,
+      "clocked": null,
+      "args": "[]",
+      "kwargs": "{}",
+      "queue": null,
+      "exchange": null,
+      "routing_key": null,
+      "headers": "{}",
+      "priority": null,
+      "expires": null,
+      "expire_seconds": 43200,
+      "one_off": false,
+      "start_time": null,
+      "enabled": true,
+      "last_run_at": null,
+      "total_run_count": 0,
+      "date_changed": "2023-07-26T19:17:26.973Z",
+      "description": ""
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$aGtOQkw3c0hzY2JBc2U0dHBsVEkyUA$xM1dYctlDj8MJfDr9zf+llO8ZtsK1fKXT41YXcO0h/s",
+      "last_login": "2023-07-26T19:25:11.933Z",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-07-26T19:24:32.449Z",
+      "name": "",
+      "email": "dev@dev.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "refresh_token.refreshtoken",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "token": "7dc724fea78ce298a26c9829fd910e6e9c8e8b0d",
+      "created": "2023-07-26T20:10:52.602Z",
+      "revoked": null
+    }
+  }
+]

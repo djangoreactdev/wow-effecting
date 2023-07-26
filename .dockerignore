@@ -1,3 +1,15 @@
+.editorconfig
+.gitattributes
+.github
+.gitignore
+.gitlab-ci.yml
+.idea
+.pre-commit-config.yaml
+.readthedocs.yml
+.travis.yml
+venv
+.git
+
 # Ignore development files and directories
 node_modules
 .cache
@@ -13,3 +25,4 @@ build
 .DS_Store
 npm-debug.log
 yarn-error.log
+venv
