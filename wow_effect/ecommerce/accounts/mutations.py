@@ -15,6 +15,8 @@ from .types import UserType
 from .utils import get_from_redis, token_delete_to_redis
 from .tasks import task_send_register_email, task_send_change_email, task_send_reset_password_email
 
+from django_graphql_jwt.utils import jwt_refresh_token_for_user
+
 
 class AccountInput(graphene.InputObjectType):
     username = graphene.String(required=True)
@@ -306,6 +308,15 @@ class UpdateProfile(graphene.Mutation):
 
 class AccountsMutation(graphene.ObjectType):
     token_auth = graphql_jwt.ObtainJSONWebToken.Field()
+
+    def resolve_refreshToken(self, info, **kwargs):
+        """
+        Returns the refresh token for the user.
+        """
+        user = info.context.user
+        refresh_token = jwt_refresh_token_for_user(user)
+        return {"refreshToken": refresh_token}
+
     verify_token = graphql_jwt.Verify.Field()
     refresh_token = graphql_jwt.Refresh.Field()
     revoke_token = graphql_jwt.Revoke.Field()

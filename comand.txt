@@ -6,3 +6,5 @@ python manage.py createsuperuser
 
 python manage.py dumpdata --exclude auth.permission --exclude contenttypes > backup.json
 python manage.py loaddata > backup.json
+
+uvicorn config.asgi:application --host 0.0.0.0 --reload --reload-include '*.html'
